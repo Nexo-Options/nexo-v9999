@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "types": ["node", "mocha", "chai", "hardhat"]
+  },
+  "include": ["./scripts", "./test", "./deploy", "./typechain", "./hardhat.config.ts"],
+  "exclude": ["dist", "node_modules"]
+}
