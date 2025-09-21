@@ -1,0 +1,17 @@
+name: "Auto-close inactive issues"
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mark and close stale issues
+        uses: actions/stale@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: "This issue has been marked as inactive because it has had no updates for 30 days. If you’d like to keep it open, please remove the stale label or leave a comment. Otherwise, it will be closed in 5 days."
+          days-before-stale: 30
+          days-before-close: 5
