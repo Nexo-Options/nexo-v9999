@@ -1,0 +1,49 @@
+{
+  "name": "nexo-contracts",
+  "version": "1.0.0",
+  "description": "Smart contracts with Hardhat + TypeScript",
+  "main": "hardhat.config.ts",
+  "scripts": {
+    "build": "hardhat clean && hardhat compile",
+    "clean": "hardhat clean",
+    "compile": "hardhat compile",
+    "lint": "solhint 'contracts/**/*.sol' && eslint . && markdownlint --ignore node_modules '**/*.md'",
+    "format": "prettier --check 'contracts/**/*.sol' 'test/**/*.ts' '**/*.md' '**/*.yml'",
+    "prettier:write": "prettier --write 'contracts/**/*.sol' 'test/**/*.ts' '**/*.md' '**/*.yml'",
+    "test": "hardhat test",
+    "gas": "REPORT_GAS=1 hardhat test",
+    "coverage": "hardhat clean && hardhat compile && hardhat coverage",
+    "deploy": "hardhat deploy"
+  },
+  "author": "0mllwntrmt3",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "@typechain/hardhat": "^9.1.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prettier": "^5.1.0",
+    "eslint-plugin-react": "^7.34.0",
+    "hardhat": "^2.22.3",
+    "hardhat-deploy": "^0.12.0",
+    "markdownlint": "^0.34.0",
+    "markdownlint-cli": "^0.39.0",
+    "prettier": "^3.2.5",
+    "prettier-plugin-solidity": "^1.1.3",
+    "solhint": "^4.1.0",
+    "solidity-coverage": "^0.8.10",
+    "ts-node": "^10.9.2",
+    "typechain": "^9.0.0",
+    "typescript": "^5.5.0"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.8.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "dotenv": "^16.4.5"
+  }
+}
